@@ -42,6 +42,9 @@ const createNewNote = async (req, res) => {
         return res.status(409).json({ message: 'Duplicate note title' })
     }
 
+
+     // Convert the user to a MongoDB ObjectId
+     
     // Create and store the new user 
     const note = await Note.create({ user, title, text })
 
